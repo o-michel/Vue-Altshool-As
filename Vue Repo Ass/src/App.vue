@@ -51,9 +51,9 @@ export default {
     // }
   },
   created() {
-    bus.$on('repo-clicked', (data) =>{
-      console.log(data);
-    })
+    // bus.$on('repo-clicked', (data) =>{
+      // console.log(data);
+    // })
     
   },
   async mounted() {

@@ -1,6 +1,6 @@
 <template>
   <div class="hellos">
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima sequi quaerat voluptas unde vero, dolore maxime exercitationem tempore ex alias. Quae cupiditate, eveniet autem quia aliquid commodi distinctio impedit reprehenderit.</p>
+    <p>Hi am micheal, A front-end developer in altschool</p>
 
     <!-- Small info and pagination -->
 
