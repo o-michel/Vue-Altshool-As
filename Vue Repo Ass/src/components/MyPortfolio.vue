@@ -1,7 +1,7 @@
 <template>
     <div class="hello">
         
-        <h1 class="repo_name" v-for="eachrepo in recievedData" :key="eachrepo.id" > <div v-on:click="getEachRepo()" class="toBeClicked">  {{ eachrepo.full_name }} </div> </h1>
+        <h1  class="repo_name" v-for="eachrepo in recievedData" :key="eachrepo.id" > <div @click="getEachRepo(eachrepo.id)"  class="toBeClicked">  {{ eachrepo.full_name }} </div> </h1>
 
               
 
@@ -12,6 +12,7 @@
   </template>
   
   <script>
+  import { bus } from '../main';
 
 //   console.log(eachrepo);
 
@@ -26,14 +27,20 @@
     return {
         // const model : eachrepo 
         // console.log({eachrepo});
-        //   recievedData: null
+        // recievedData1: recievedData
     }
 },
- methods: {
-    async getEachRepo() {
-       const fig = await eachrepo.full_name
-          console.log(fig);
+methods: {
+    getEachRepo(id) {
+        //    const fig = await eachrepo.full_name
+        console.log(id);
+        
+        // console.log(this.recievedData1);
+        //   this.$emit('repo-clicked', id)
+        bus.$emit('repo-clicked', id)
     }
+
+
     // const clicked = console.log(eachrepo);
     //    console.log(eachrepo);
     

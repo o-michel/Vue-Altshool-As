@@ -8,10 +8,13 @@
     </nav> -->
     <!-- <Portfolio :title="recievedData"  /> -->
   </div>
-  <router-view :title="recievedData" />
+  <router-view   :title="recievedData" />
+  <!-- <router-view @repo-clicked="clickedRepoData"  :title="recievedData" /> -->
 </template>
 
 <script  >
+  import { bus } from './main';
+
 import Navigation from "./components/Navigation.vue";
 // import Portfolio from "./components/RepoData.vue";
  
@@ -28,42 +31,54 @@ export default {
   
   data() {
     return {
-      recievedData: null
+      recievedData: {}
     }
   },
-   methods: {
-
-
-
+  methods: {
+    // console.log(recievedData);
+    
+    // clickedRepoData() {
+      
+      //   // console.log( id);
+      // },
+    
+    
     // async getUser () {
-    //   const fetchData = await fetch('https://api.github.com/users/o-michel/repos');
+      //   const fetchData = await fetch('https://api.github.com/users/o-michel/repos');
     //   const data = await fetchData.json()
-
+    
     // console.log(data);
     // }
   },
-  async created() {
+  created() {
+    bus.$on('repo-clicked', (data) =>{
+      console.log(data);
+    })
+    
+  },
+  async mounted() {
     const res = await fetch('https://api.github.com/users/o-michel/repos');
-      const data = await res.json()
-      this.recievedData = await data;
-
+    const data = await res.json()
+    this.recievedData = await data;
+    
     // console.log(data[0].full_name);
     // console.log(data[0].full_name);
     // console.log('mounted!')
-
+    
     // async load =data.map((eachData)=>{
       // console.log(eachData.full_name)
       // this.recievedData = await eachData
-        // console.log(this.displayedData);
-    // })
-    // setInterval(() => {
       // console.log(this.displayedData);
-    //   // console.log(fetchData);
-    // }, 1000);
-  }
-  
-}
-</script>
+      // })
+      // setInterval(() => {
+        // console.log(this.displayedData);
+        //   // console.log(fetchData);
+        // }, 1000);
+      }
+      
+      
+    }
+  </script>
 
 <style>
 
