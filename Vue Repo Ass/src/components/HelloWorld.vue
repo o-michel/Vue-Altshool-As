@@ -1,6 +1,16 @@
 <template>
   <div class="hellos">
-    <p>Hi am micheal, A front-end developer in altschool</p>
+    <!-- left side -->
+    <div class="side img_side">
+      <img src="../assets/mich.jpg" alt="My Image" srcset="">
+    </div>
+
+    <!-- Right side -->
+    <div class="side right_side">
+      <h2>Hi There, <br> I'm Micheal <span>Owojori</span></h2>
+      <h4>I am a <span>Front-end Developer</span></h4>
+    </div>
+    <!-- <p>Hi am micheal, A front-end developer in altschool</p> -->
 
     <!-- Small info and pagination -->
 
@@ -46,7 +56,30 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.hellos{
+  /* background-color: red; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-content: center; */
+  flex-direction: row-reverse;
+}
+
+.img_side{
+  padding: 10px;
+  /* background-color: blue; */
+  /* width: 50%; */
+}
+
+img{
+  border-radius: 30%;
+  width: 20rem;
+  height: auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
 /* 
+
+
 h3 {
   margin: 40px 0 0;
 }

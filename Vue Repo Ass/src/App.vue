@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Always render</h1>
+    <!-- <h1>Always render</h1> -->
     <Navigation />
     <!-- <nav>
       <router-link  to="/">Home</router-link> |
@@ -8,12 +8,13 @@
     </nav> -->
     <!-- <Portfolio :title="recievedData"  /> -->
   </div>
-  <router-view   :title="recievedData" />
+  <router-view   />
+  <!-- <router-view   :title="recievedData" /> -->
   <!-- <router-view @repo-clicked="clickedRepoData"  :title="recievedData" /> -->
 </template>
 
 <script  >
-  import { bus } from './main';
+  // import { bus } from './main';
 
 import Navigation from "./components/Navigation.vue";
 // import Portfolio from "./components/RepoData.vue";
@@ -31,7 +32,7 @@ export default {
   
   data() {
     return {
-      recievedData: {}
+      // recievedData: {}
     }
   },
   methods: {
@@ -56,11 +57,15 @@ export default {
     // })
     
   },
-  async mounted() {
-    const res = await fetch('https://api.github.com/users/o-michel/repos');
-    const data = await res.json()
-    this.recievedData = await data;
-    
+
+
+  // async mounted() {
+  //   const res = await fetch('https://api.github.com/users/o-michel/repos');
+  //   const data = await res.json()
+  //   this.recievedData = await data;
+  
+  
+
     // console.log(data[0].full_name);
     // console.log(data[0].full_name);
     // console.log('mounted!')
@@ -74,7 +79,7 @@ export default {
         // console.log(this.displayedData);
         //   // console.log(fetchData);
         // }, 1000);
-      }
+      // }
       
       
     }
