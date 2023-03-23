@@ -1,6 +1,6 @@
 <template>
   <nav>
-      <router-link  to="/">Home</router-link> |
+      <router-link  to="/">Home</router-link> 
       <router-link  to="/about"> My Portfolio</router-link>
       <!-- <router-link  to="/about"> Nasted link</router-link> -->
     </nav>
@@ -16,6 +16,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>

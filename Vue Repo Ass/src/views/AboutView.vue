@@ -19,7 +19,7 @@ import MyPortfolio from '@/components/MyPortfolio.vue'
 export default {
   name: 'AboutView',
   // name: 'HomeView',
-  props: {
+  props: { 
     title: {
       type: Object,
     }
@@ -28,13 +28,13 @@ export default {
     MyPortfolio,
     // Portfolio
   },
-  methods: {
-    getEachRepo2(id) {
+  // methods: {
+    // getEachRepo2(id) {
     //    const fig = await eachrepo.full_name
-          console.log(id);
+          // console.log(id);
           // this.$emit('repo-clicked', id)
-    }
-  },
+    // }
+  // },
   // emits: ['repo-clicked'],
 
   

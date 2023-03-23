@@ -1,5 +1,5 @@
 <template>
-  <p>More details like discription should be display here</p>
+  <!-- <p>More details like discription should be display here</p> -->
   <Moredetails />
   <!-- <router-link  to="/about"> Nasted link</router-link> -->
   <!-- <router-link  :to="{ name: 'about'}">Home</router-link> | -->
@@ -8,7 +8,7 @@
 </template>
 
 <script>
-console.log(Moredetails);
+// console.log(Moredetails);
 
 import Moredetails from "../components/MoreDetails.vue";
 export default {

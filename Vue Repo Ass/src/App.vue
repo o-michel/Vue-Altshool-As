@@ -100,11 +100,22 @@ nav {
 }
 
 nav a {
+  text-decoration: none;
+  font-size: 1.2rem;
   font-weight: bold;
   color: #2c3e50;
+  padding: 1rem;
+  background-color: rgba(240, 239, 239, 0.507);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.12);
+}
+
+nav a:hover{
+  background-color: rgba(232, 240, 225, 0.89);
+
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: #426cb9;
+  /* color: #42b983; */
 }
 </style>
